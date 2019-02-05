@@ -1,5 +1,5 @@
 {
-  "name": "axios-request-handler",
+  "name": "ax-request-handler",
   "version": "1.0.0",
   "description": "A request handler based on axios",
   "main": "index.js",
