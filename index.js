@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-export default requestHandler(url => {
-  axios
+module.exports = function requestHandler(url) {
+  return axios
     .get(url)
     .then(function(response) {
       // handle success
@@ -14,4 +14,4 @@ export default requestHandler(url => {
     .then(function() {
       // always executed
     });
-});
+};
