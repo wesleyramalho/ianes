@@ -1,8 +1,8 @@
 {
-  "name": "ax-request-handler",
-  "version": "1.0.3",
+  "name": "ianes",
+  "version": "0.0.0",
   "description": "A request handler based on axios",
-  "main": "./ianes/modules.js",
+  "main": "./modules.js",
   "scripts": {},
   "repository": {
     "type": "git",
