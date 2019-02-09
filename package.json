@@ -1,5 +1,8 @@
 {
   "name": "ianes",
+  "jest": {
+    "verbose": true
+  },
   "version": "0.0.0",
   "description": "A request handler based on axios",
   "main": "./modules.js",
@@ -25,6 +28,7 @@
     "axios": "^0.18.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.3.1",
     "jest": "^24.1.0"
   }
 }
