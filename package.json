@@ -1,7 +1,9 @@
 {
   "name": "ianes",
   "jest": {
-    "verbose": true
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageReporters": ["json", "html"]
   },
   "version": "0.0.0",
   "description": "A request handler based on axios",
