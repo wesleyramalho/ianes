@@ -1,13 +1,15 @@
+import axios from "axios";
 import {
-  defaultErrorRequestHandler,
-  defaultSuccessRequestHandler
+  defaultBeforeTheRequestIsSentHandler,
+  defaultRequestErrorHandler,
+  defaultErrorResponseHandler,
+  defaultSuccessResponseHandler
 } from "./requestHandlers";
 
-const axios = require("axios");
 
 export const interceptorForRequest = (
-  handleBeforeTheRequestIsSent = config => config,
-  handleRequestError = error => Promise.reject(error)
+  handleBeforeTheRequestIsSent = defaultBeforeTheRequestIsSentHandler,
+  handleRequestError = defaultRequestErrorHandler
 ) => {
   //request interceptor
   axios.interceptors.request.use(
@@ -23,8 +25,8 @@ export const interceptorForRequest = (
 };
 
 export const interceptorForResponse = (
-  handleResponseDataSuccess = defaultSuccessRequestHandler,
-  handleResponseError = defaultErrorRequestHandler
+  handleResponseDataSuccess = defaultSuccessResponseHandler,
+  handleResponseError = defaultErrorResponseHandler
 ) => {
   // Add a response interceptor
   axios.interceptors.response.use(
