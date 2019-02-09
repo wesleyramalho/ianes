@@ -1,13 +1,17 @@
-export const defaultSuccessRequestHandler = res => {
-  return res.data;
-};
-
 function hasCompleteResponse(response) {
   if (!!response && !!response.status && !!response.statusText) return true;
   return false;
 }
 
-export const defaultErrorRequestHandler = err => {
+export const defaultBeforeTheRequestIsSentHandler = config => config;
+
+export const defaultRequestErrorHandler = error => Promise.reject(error);
+
+export const defaultSuccessResponseHandler = res => {
+  return res.data;
+};
+
+export const defaultErrorResponseHandler = err => {
   const { response } = err;
   if (hasCompleteResponse(response)) {
     const { status, statusText } = response;
