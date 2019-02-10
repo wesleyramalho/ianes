@@ -14,23 +14,14 @@ describe("testing hasCompleteResponse possible values", () => {
     utils,
     "hasCompleteResponse"
   );
-  
-  test("passing right response object as parameter", () => {
+
+  test("passing complete and incomplete response object as parameter", () => {
     const completeResponse = {
       status: 444,
       statusText: "No response"
     };
-    hasCompleteResponseMockFunction(completeResponse);
-    expect(hasCompleteResponseMockFunction).toBeCalledWith(
-      expect.objectContaining({
-        status: expect.any(Number),
-        statusText: expect.any(String)
-      })
-    );
-  });
-
-  test("passing wrong response (incomplete) object as parameter", () => {
     const incompleteResponse = null;
+    hasCompleteResponseMockFunction(completeResponse);
     hasCompleteResponseMockFunction(incompleteResponse);
     expect(hasCompleteResponseMockFunction).toBeCalledWith(
       expect.objectContaining({
@@ -39,4 +30,6 @@ describe("testing hasCompleteResponse possible values", () => {
       })
     );
   });
+
+ 
 });
