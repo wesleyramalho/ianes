@@ -21,7 +21,7 @@ export const setAuthorizationHeader = token => {
 
 export const resetAuthorizationHeader = () => {
   delete axios.defaults.headers.common["Authorization"];
-  return !!axios.defaults.headers.common["Authorization"];
+  return axios.defaults.headers.common["Authorization"];
 };
 
 export const setDefaultContentType = contentType => {

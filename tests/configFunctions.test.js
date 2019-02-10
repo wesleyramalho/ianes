@@ -25,7 +25,7 @@ describe("possible values to Authorization header", () => {
     );
   });
   test("resetting Authorization header", () => {
-    expect(resetAuthorizationHeader()).toBe(false);
+    expect(resetAuthorizationHeader()).toBeUndefined();
   });
 });
 
