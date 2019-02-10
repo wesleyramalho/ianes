@@ -20,24 +20,24 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">26.67% </span>
+        <span class="strong">33.33% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>4/15</span>
+        <span class='fraction'>4/12</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/7</span>
+        <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>0/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">44.44% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>4/12</span>
+        <span class='fraction'>4/9</span>
       </div>
     </div>
     <p class="quiet">
@@ -69,22 +69,13 @@
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
-<a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -95,31 +86,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">function <span class="fstat-no" title="function not covered" >hasCompleteResponse(</span>response) {
-<span class="cstat-no" title="statement not covered" >  if (!!response &amp;&amp; !!response.status &amp;&amp; !!response.statusText) <span class="cstat-no" title="statement not covered" >return true;</span></span>
-<span class="cstat-no" title="statement not covered" >  return false;</span>
-}
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { hasCompleteResponse } from "./utils";
 &nbsp;
 export const defaultBeforeTheRequestIsSentHandler = <span class="fstat-no" title="function not covered" >co</span>nfig =&gt; <span class="cstat-no" title="statement not covered" >config;</span>
 &nbsp;
 export const defaultRequestErrorHandler = <span class="fstat-no" title="function not covered" >er</span>ror =&gt; <span class="cstat-no" title="statement not covered" >Promise.reject(error);</span>
 &nbsp;
-export const defaultSuccessResponseHandler = <span class="fstat-no" title="function not covered" >re</span>s =&gt; {
-<span class="cstat-no" title="statement not covered" >  return res.data;</span>
-};
+export const defaultSuccessResponseHandler = <span class="fstat-no" title="function not covered" >re</span>s =&gt; <span class="cstat-no" title="statement not covered" >res.data;</span>
 &nbsp;
 export const defaultErrorResponseHandler = <span class="fstat-no" title="function not covered" >er</span>r =&gt; {
   const { response } = <span class="cstat-no" title="statement not covered" >err;</span>
 <span class="cstat-no" title="statement not covered" >  if (hasCompleteResponse(response)) {</span>
-    const { status, statusText } = <span class="cstat-no" title="statement not covered" >response;</span>
+    const { status, statusText, data } = <span class="cstat-no" title="statement not covered" >response;</span>
 <span class="cstat-no" title="statement not covered" >    return Promise.reject({</span>
       status,
-      statusText
+      statusText,
+      data
     });
   }
 <span class="cstat-no" title="statement not covered" >  return Promise.reject({</span>
@@ -133,7 +121,7 @@ export const defaultErrorResponseHandler = <span class="fstat-no" title="functio
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 10 2019 08:13:32 GMT-0200 (Brasilia Summer Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Feb 10 2019 12:57:52 GMT-0200 (Brasilia Summer Time)
 </div>
 </div>
 <script src="prettify.js"></script>
