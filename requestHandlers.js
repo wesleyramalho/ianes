@@ -1,12 +1,14 @@
 import { hasCompleteResponse } from "./utils";
 
-export const defaultBeforeTheRequestIsSentHandler = config => config;
+export const defaultBeforeTheRequestIsSentHandler = (config = {}) => config;
 
-export const defaultRequestErrorHandler = error => Promise.reject(error);
+export const defaultRequestErrorHandler = (
+  error = { status: 444, statusText: "No response" }
+) => Promise.reject(error);
 
-export const defaultSuccessResponseHandler = res => res.data;
+export const defaultSuccessResponseHandler = (res = { data: {} }) => res.data;
 
-export const defaultErrorResponseHandler = err => {
+export const defaultErrorResponseHandler = (err = {}) => {
   const { response } = err;
   if (hasCompleteResponse(response)) {
     const { status, statusText, data } = response;
