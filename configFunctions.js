@@ -7,6 +7,7 @@ import {
   defaultErrorResponseHandler,
   defaultSuccessResponseHandler
 } from "./requestHandlers";
+import { isNumber } from "./utils";
 
 export const setBaseUrl = url => {
   if (!url) return null;
@@ -17,9 +18,10 @@ export const setAuthorizationHeader = token => {
   if (!token) return null;
   return (axios.defaults.headers.common["Authorization"] = token);
 };
+
 export const resetAuthorizationHeader = () => {
   delete axios.defaults.headers.common["Authorization"];
-  return axios.defaults.headers.common["Authorization"];
+  return !!axios.defaults.headers.common["Authorization"];
 };
 
 export const setDefaultContentType = contentType => {
@@ -28,7 +30,7 @@ export const setDefaultContentType = contentType => {
 };
 
 export const setDefaultTimeOut = timeout => {
-  if (!timeout) return null;
+  if (!timeout || !isNumber(timeout) || !Number.isInteger(timeout)) return null;
   return (axios.defaults.timeout = timeout);
 };
 
