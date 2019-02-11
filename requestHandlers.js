@@ -8,7 +8,7 @@ export const defaultRequestErrorHandler = (
 
 export const defaultSuccessResponseHandler = (res = { data: {} }) => res.data;
 
-export const defaultErrorResponseHandler = (err = {}) => {
+export const defaultErrorResponseHandler = (err) => {
   const { response } = err;
   if (hasCompleteResponse(response)) {
     const { status, statusText, data } = response;
