@@ -7,7 +7,7 @@ Built with :heart:.
 [![npm version](https://img.shields.io/badge/npm-v.0.0.0-yellow.svg)](https://www.npmjs.org/package/ianes)
 [![Statements coverage](https://img.shields.io/badge/Statements%20Coverage-77.8%25-yellowgreen.svg)](https://coveralls.io/r/mzabriskie/axios)
 
-IANES is a wrapper for [axios](https://github.com/axios/axios "Axios"), a promise based HTTP client for the browser and node.js
+> IANES is a wrapper for [axios](https://github.com/axios/axios "Axios"), a promise based HTTP client for the browser and node.js
 
 ## Features
 
