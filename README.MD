@@ -1,13 +1,11 @@
-![React Loadable](./img/ianes.png)
+![Ianes](./img/ianes.png)
 
-## IANES - A request handler based on [axios](https://github.com/axios/axios "Axios")
-
-Built with :heart:.
+## Ianes - A request handler based on [axios](https://github.com/axios/axios "Axios")
 
 [![npm version](https://img.shields.io/badge/npm-v.0.0.0-yellow.svg)](https://www.npmjs.org/package/ianes)
 [![Statements coverage](https://img.shields.io/badge/Statements%20Coverage-77.8%25-yellowgreen.svg)](https://coveralls.io/r/mzabriskie/axios)
 
-> IANES is a wrapper for [axios](https://github.com/axios/axios "Axios"), a promise based HTTP client for the browser and node.js
+> IANES is a wrapper for [axios](https://github.com/axios/axios "Axios"), a promise based HTTP client for the browser and node.js. Built with :heart:.
 
 ## Features
 
@@ -66,14 +64,19 @@ export default App;
 
 ## Configurations
 
+By default,`handleResponseDataSuccess` and `handleResponseError` are initialized with [default handlers functions](./requestHandlers.js). Also, `defaultContentType` and `defaultTimeout` are initialized with `application/json` and  `240000`, respectively.
+
 The configureIanes method accept the following properties:
 
 ```js
 {
+  //default base url used in requests
   apiUrl: "https://myapiurl.com/",
   
+  //It will be used in the Authorization header in all requests sent
   apiToken: "Bearer MYWEBTOKENAPIANDANOTHERSWORDS",
   
+  //Content type to be used in requests sent
   defaultContentType: "application/json",
   
   //defaultTimeout should be a number
@@ -93,7 +96,20 @@ The configureIanes method accept the following properties:
 }
 ```
 
-By default, we initialize `handleResponseDataSuccess` and `handleResponseError` with [default handlers functions](./requestHandlers.js)
+## Examples
+
+#### Reset Authorization Header
+#### Set Authorization Header
+#### Get
+#### Post
+#### Put
+#### Patch
+#### Remove (delete)
+#### Request 
+#### Head 
+#### Options 
+
+
 
 ## Resources
 
