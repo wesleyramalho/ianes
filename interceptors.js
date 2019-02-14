@@ -6,7 +6,6 @@ import {
   defaultSuccessResponseHandler
 } from "./requestHandlers";
 
-
 export const interceptorForRequest = (
   handleBeforeTheRequestIsSent = defaultBeforeTheRequestIsSentHandler,
   handleRequestError = defaultRequestErrorHandler
@@ -22,6 +21,7 @@ export const interceptorForRequest = (
       return handleRequestError(error);
     }
   );
+  return axios.interceptors;
 };
 
 export const interceptorForResponse = (
@@ -39,4 +39,5 @@ export const interceptorForResponse = (
       return handleResponseError(error);
     }
   );
+  return axios.interceptors;
 };
