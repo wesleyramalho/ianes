@@ -60,7 +60,7 @@ The configureIanes method accept the following properties:
 ```js
 {
   //default base url used in requests
-  apiUrl: "https://myapiurl.com/",
+  apiUrl: "https://myapiurl.com",
   
   //It will be used in the Authorization header in all requests sent
   apiToken: "Bearer MYWEBTOKENAPIANDANOTHERSWORDS",
@@ -88,7 +88,8 @@ The configureIanes method accept the following properties:
 ## Examples
 
 #### Set Authorization Header
-Setting token through `setAuthorizationHeader` makes that Authorization header sent in requests uses the value passed by it.
+
+Setting token through `setAuthorizationHeader` makes that `Authorization` header sent in requests uses the value passed by it.
 
 ```js
 import { setAuthorizationHeader } from "ianes/modules";
@@ -99,29 +100,121 @@ setAuthorizationHeader(token);
 ```
 
 #### Reset Authorization Header
+
+Resetting token through `resetAuthorizationHeader` makes that `Authorization` header stops being sent.
+
 ```js
 import { resetAuthorizationHeader } from "ianes/modules";
 
-//
 resetAuthorizationHeader();
 
 ```
 
-
 #### Get
-#### Post
-#### Put
-#### Patch
-#### Remove (delete)
-#### Request 
-#### Head 
-#### Options 
 
+```js
+import { get } from "ianes/modules";
+
+get("/teachers")
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+
+```
+
+#### Post
+
+```js
+import { post } from "ianes/modules";
+
+const student = { name: "John Mayer", age: 21 };
+
+post("/students", student)
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+```
+
+#### Put
+
+```js
+import { put } from "ianes/modules";
+
+const student = { id: 234432, name: "Marrie Mayer", age: 21 };
+
+put(`/students/${student.id}`, student)
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+```
+
+#### Patch
+
+```js
+import { patch } from "ianes/modules";
+
+const student = { id: 234432, name: "Marrie Mayer", age: 21 };
+
+patch(`/students/${student.id}`, { name: "Larry" })
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+```
+
+#### Remove (delete)
+
+```js
+import { patch } from "ianes/modules";
+
+const student = { id: 234432, name: "Marrie Mayer", age: 21 };
+
+patch(`/students/${student.id}`)
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+```
+
+<!--
+#### Request 
+
+```js
+import { request } from "ianes/modules";
+
+//...
+
+```
+
+#### Head 
+
+```js
+import { request } from "ianes/modules";
+
+//...
+
+```
+
+#### Options 
 
 
 ## Resources
 
 * [Changelog]()
+-->
 
 ## Credits
 
