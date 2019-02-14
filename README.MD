@@ -38,13 +38,9 @@ If your're using React, we recommend you to configure IANES in some of the entry
 import { configureIanes } from "ianes/modules";
 
 const API_URL = "http://localhost:3000/api";
-const DEFAULT_CONTENT_TYPE = "application/json";
-const DEFAULT_TIMEOUT = 240000;
 
 const configurations = {
   apiUrl: API_URL,
-  defaultContentType: DEFAULT_CONTENT_TYPE,
-  defaultTimeout: DEFAULT_TIMEOUT,
 };
 
 configureIanes(configurations);
