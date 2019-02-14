@@ -172,11 +172,11 @@ patch(`/students/${student.id}`, { name: "Larry" })
 #### Remove (delete)
 
 ```js
-import { patch } from "ianes/modules";
+import { remove } from "ianes/modules";
 
 const student = { id: 234432, name: "Marrie Mayer", age: 21 };
 
-patch(`/students/${student.id}`)
+remove(`/students/${student.id}`)
   .then((response) => {
     console.log(response)
   })
