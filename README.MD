@@ -29,14 +29,13 @@ Using npm:
 $ npm install ianes
 ```
 
-
 ## Getting Started
 
 If your're using React, we recommend you to configure IANES in some of the entry point of your application. In our example, it was made in the file that contains all the possible routes.
 
 ```js
 //others imports
-import { configureIanes } from "ax-request-handler/modules";
+import { configureIanes } from "ianes/modules";
 
 const API_URL = "http://localhost:3000/api";
 const DEFAULT_CONTENT_TYPE = "application/json";
@@ -99,7 +98,23 @@ The configureIanes method accept the following properties:
 ## Examples
 
 #### Reset Authorization Header
+```js
+import { resetAuthorizationHeader } from "ianes/modules";
+
+//
+resetAuthorizationHeader();
+
+```
+
 #### Set Authorization Header
+```js
+import { setAuthorizationHeader } from "ianes/modules";
+
+//
+setAuthorizationHeader();
+
+```
+
 #### Get
 #### Post
 #### Put
