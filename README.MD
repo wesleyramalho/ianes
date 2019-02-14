@@ -51,7 +51,7 @@ configureIanes(configurations);
 
 By default,`handleResponseDataSuccess` and `handleResponseError` are initialized with [default handlers functions](./requestHandlers.js). Also, `defaultContentType` and `defaultTimeout` are initialized with `application/json` and  `240000`, respectively.
 
-The configureIanes method accept the following properties:
+The `configureIanes` functions accept the following properties:
 
 ```js
 {
