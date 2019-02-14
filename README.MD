@@ -16,8 +16,6 @@ Built with :heart:.
 - Supports the [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) API
 - Intercept request and response
 - Transform request and response data
-- Cancel requests
-- Automatic transforms for JSON data
 
 ## Installing
 
@@ -39,10 +37,7 @@ $ npm install ianes
 If your're using React, we recommend you to configure IANES in some of the entry point of your application. In our example, it was made in the file that contains all the possible routes.
 
 ```js
-import { Switch, Route } from "react-router-dom";
-import React from "react";
-import Page from "./Page";
-import AnotherPage from "./AnotherPage";
+//others imports
 import { configureIanes } from "ax-request-handler/modules";
 
 const API_URL = "http://localhost:3000/api";
@@ -57,6 +52,7 @@ const configurations = {
 
 configureIanes(configurations);
 
+//Example of React routes
 const App = () => (
   <Switch>
     <Route exact path="/" component={Page} />
@@ -74,57 +70,30 @@ The configureIanes method accept the following properties:
 
 ```js
 {
-  apiUrl: API_URL,
+  apiUrl: "https://myapiurl.com/",
   
-  apiToken: API_TOKEN,
+  apiToken: "Bearer MYWEBTOKENAPIANDANOTHERSWORDS",
   
-  defaultContentType: DEFAULT_CONTENT_TYPE,
+  defaultContentType: "application/json",
   
   //defaultTimeout should be a number
-  defaultTimeout: DEFAULT_TIMEOUT,
+  defaultTimeout: 240000,
   
-  //handleBeforeTheRequestIsSent should return the config object
+  //handleBeforeTheRequestIsSent expects a function that should return the config object
   handleBeforeTheRequestIsSent: config => config,
   
-  //handleRequestError must return a promise
+  //handleRequestError expects a function that must return a promise
   handleRequestError: error => Promise.reject(error),
   
-  handleResponseDataSuccess: response => console.log(response),
+  //handleResponseDataSuccess expects a function that should return response
+  handleResponseDataSuccess: response => (response),
   
+  //handleRequestError expects a function that must return a promise with the error object
   handleResponseError: error => Promise.reject(error)
 }
 ```
 
-## Response Schema
-
-The response for a request contains the following information.
-
-```js
-
-```
-
-## Config Defaults
-
-You can specify config defaults that will be applied to every request.
-
-### Global axios defaults
-
-
-## Interceptors
-
-You can intercept requests or responses before they are handled by `then` or `catch`.
-
-```js
-
-
-```
-
-## Handling Errors
-
-```js
-
-```
-
+By default, we initialize `handleResponseDataSuccess` and `handleResponseError` with [default handlers functions](./requestHandlers.js)
 
 ## Resources
 
