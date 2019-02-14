@@ -48,17 +48,7 @@ const configurations = {
 };
 
 configureIanes(configurations);
-
-//Example of React routes
-const App = () => (
-  <Switch>
-    <Route exact path="/" component={Page} />
-    <Route path="/pagina" component={AnotherPage} />
-  </Switch>
-);
-
-export default App;
-
+//more code...
 ```
 
 ## Configurations
@@ -97,6 +87,17 @@ The configureIanes method accept the following properties:
 
 ## Examples
 
+#### Set Authorization Header
+Setting token through `setAuthorizationHeader` makes that Authorization header sent in requests uses the value passed by it.
+
+```js
+import { setAuthorizationHeader } from "ianes/modules";
+
+const token = "Bearer MYWEBTOKENAPIANDANOTHERSWORDS"
+setAuthorizationHeader(token);
+
+```
+
 #### Reset Authorization Header
 ```js
 import { resetAuthorizationHeader } from "ianes/modules";
@@ -106,14 +107,6 @@ resetAuthorizationHeader();
 
 ```
 
-#### Set Authorization Header
-```js
-import { setAuthorizationHeader } from "ianes/modules";
-
-//
-setAuthorizationHeader();
-
-```
 
 #### Get
 #### Post
