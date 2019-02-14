@@ -2,8 +2,8 @@
 
 ## Ianes - A request handler based on [axios](https://github.com/axios/axios "Axios")
 
-[![npm version](https://img.shields.io/badge/npm-v.0.0.0-yellow.svg)](https://www.npmjs.org/package/ianes)
-[![Statements coverage](https://img.shields.io/badge/Statements%20Coverage-77.8%25-yellowgreen.svg)](https://coveralls.io/r/mzabriskie/axios)
+[![npm version](https://img.shields.io/badge/npm-0.1.1-yellowgreen.svg)](https://www.npmjs.org/package/ianes)
+[![Statements coverage](https://img.shields.io/badge/Statements%20Coverage-82.14%25-green.svg)](./coverage/index.html)
 
 > IANES is a wrapper for [axios](https://github.com/axios/axios "Axios"), a promise based HTTP client for the browser and node.js. Built with :heart:.
 
