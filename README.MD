@@ -31,7 +31,7 @@ $ npm install ianes
 
 ## Getting Started
 
-If your're using React, we recommend you to configure IANES in some of the entry point of your application. In our example, it was made in the file that contains all the possible routes.
+If you're using React, we recommend you to configure IANES in some of the entry point of your application. In our example, it was made in the file that contains all the possible routes.
 
 ```js
 //others imports
