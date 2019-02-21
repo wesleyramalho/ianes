@@ -48,6 +48,6 @@ export const configureIanes = ({
   setAuthorizationHeader(apiToken);
   setDefaultContentType(defaultContentType);
   setDefaultTimeOut(defaultTimeout);
-  interceptorForRequest(handleBeforeTheRequestIsSent, handleRequestError);
   interceptorForResponse(handleResponseDataSuccess, handleResponseError);
+  interceptorForRequest(handleBeforeTheRequestIsSent, handleRequestError);
 };
