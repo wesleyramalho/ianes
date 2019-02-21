@@ -1,6 +1,6 @@
 import axios from "axios";
-import { configureIanes, setAuthorizationHeader, resetAuthorizationHeader } from "./configFunctions";
-import { remove } from "./remove";
+import { configureIanes, setAuthorizationHeader, resetAuthorizationHeader } from "./src/configFunctions";
+import { remove } from "./src/remove";
 
 
 //exporting all modules for use in another pages and components
