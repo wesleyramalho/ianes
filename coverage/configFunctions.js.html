@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">76.92% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/26</span>
+        <span class='fraction'>26/26</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">57.89% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>11/19</span>
+        <span class='fraction'>19/19</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">83.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>5/6</span>
+        <span class='fraction'>6/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">72.73% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>16/22</span>
+        <span class='fraction'>22/22</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -111,28 +111,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -145,12 +145,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from "axios";
 import { interceptorForRequest, interceptorForResponse } from "./interceptors";
@@ -188,22 +188,22 @@ export const setDefaultTimeOut = timeout =&gt; {
   return (axios.defaults.timeout = timeout);
 };
 &nbsp;
-export const configureIanes = <span class="fstat-no" title="function not covered" >({</span>
-  apiUrl = <span class="branch-0 cbranch-no" title="branch not covered" >"",</span>
-  apiToken = <span class="branch-0 cbranch-no" title="branch not covered" >"",</span>
-  defaultContentType = <span class="branch-0 cbranch-no" title="branch not covered" >DEFAULT_CONTENT_TYPE,</span>
-  defaultTimeout = <span class="branch-0 cbranch-no" title="branch not covered" >DEFAULT_TIMEOUT,</span>
-  handleBeforeTheRequestIsSent = <span class="branch-0 cbranch-no" title="branch not covered" >defaultBeforeTheRequestIsSentHandler,</span>
-  handleRequestError = <span class="branch-0 cbranch-no" title="branch not covered" >defaultRequestErrorHandler,</span>
-  handleResponseDataSuccess = <span class="branch-0 cbranch-no" title="branch not covered" >defaultSuccessResponseHandler,</span>
-  handleResponseError = <span class="branch-0 cbranch-no" title="branch not covered" >defaultErrorResponseHandler</span>
+export const configureIanes = ({
+  apiUrl = "",
+  apiToken = "",
+  defaultContentType = DEFAULT_CONTENT_TYPE,
+  defaultTimeout = DEFAULT_TIMEOUT,
+  handleBeforeTheRequestIsSent = defaultBeforeTheRequestIsSentHandler,
+  handleRequestError = defaultRequestErrorHandler,
+  handleResponseDataSuccess = defaultSuccessResponseHandler,
+  handleResponseError = defaultErrorResponseHandler
 }) =&gt; {
-<span class="cstat-no" title="statement not covered" >  setBaseUrl(apiUrl);</span>
-<span class="cstat-no" title="statement not covered" >  setAuthorizationHeader(apiToken);</span>
-<span class="cstat-no" title="statement not covered" >  setDefaultContentType(defaultContentType);</span>
-<span class="cstat-no" title="statement not covered" >  setDefaultTimeOut(defaultTimeout);</span>
-<span class="cstat-no" title="statement not covered" >  interceptorForRequest(handleBeforeTheRequestIsSent, handleRequestError);</span>
-<span class="cstat-no" title="statement not covered" >  interceptorForResponse(handleResponseDataSuccess, handleResponseError);</span>
+  setBaseUrl(apiUrl);
+  setAuthorizationHeader(apiToken);
+  setDefaultContentType(defaultContentType);
+  setDefaultTimeOut(defaultTimeout);
+  interceptorForRequest(handleBeforeTheRequestIsSent, handleRequestError);
+  interceptorForResponse(handleResponseDataSuccess, handleResponseError);
 };
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -211,7 +211,7 @@ export const configureIanes = <span class="fstat-no" title="function not covered
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 14 2019 17:16:16 GMT-0200 (Horário brasileiro de verão)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Feb 21 2019 20:17:10 GMT-0300 (Brasilia Standard Time)
 </div>
 </div>
 <script src="prettify.js"></script>

@@ -3,7 +3,8 @@ import {
   setAuthorizationHeader,
   resetAuthorizationHeader,
   setDefaultContentType,
-  setDefaultTimeOut
+  setDefaultTimeOut,
+  configureIanes
 } from "../configFunctions";
 
 describe("possible values to base url", () => {
@@ -50,5 +51,12 @@ describe("possible values to default timeout", () => {
   });
   test("setting a string to default timeout", () => {
     expect(setDefaultTimeOut("onetwo")).toBe(null);
+  });
+});
+
+describe("testing configureIanes method", () => {
+  test("passing empty properties as parameters", () => {
+    const config = {};
+    expect(configureIanes(config)).toBe(null);
   });
 });
